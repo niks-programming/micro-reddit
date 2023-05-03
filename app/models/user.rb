@@ -4,4 +4,7 @@ class User < ApplicationRecord
 
     # a username and email need to be unique
     validates :username, :email, uniqueness: true 
+
+    # a user can have many posts
+    has_many :posts 
 end
